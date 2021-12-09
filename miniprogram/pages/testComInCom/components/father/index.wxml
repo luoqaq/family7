@@ -1,0 +1,3 @@
+<!--pages/testComInCom/components/father/index.wxml-->
+<text>father</text>
+<child />

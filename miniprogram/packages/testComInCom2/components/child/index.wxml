@@ -1,0 +1,3 @@
+<!--pages/testComInCom/components/child/index.wxml-->
+<text>child</text>
+<view>{{text}}</view>

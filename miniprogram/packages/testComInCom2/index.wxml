@@ -1,0 +1,3 @@
+<!--packages/testComInCom2/index.wxml-->
+<text>2222测试自定义组件嵌套</text>
+<father></father>
