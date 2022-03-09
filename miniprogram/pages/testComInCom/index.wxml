@@ -1,5 +1,0 @@
-<!--pages/testComInCom/index.wxml-->
-<view>
-  测试自定义组件嵌套
-  <father></father>
-</view>

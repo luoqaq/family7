@@ -29,7 +29,7 @@
       "outputPath": ""
     },
     "enableEngineNative": false,
-    "useIsolateContext": true,
+    "useIsolateContext": false,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
@@ -41,7 +41,7 @@
   },
   "appid": "wxa58da2de63e9e972",
   "projectname": "7%E5%8F%B7%E5%AE%B6%E5%BA%AD",
-  "libVersion": "2.14.1",
+  "libVersion": "2.21.4",
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {

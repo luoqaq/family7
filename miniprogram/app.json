@@ -1,45 +1,53 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/memory/memory",
-    "pages/getOpenId/index",
-    "pages/getMiniProgramCode/index",
-    "pages/deployService/index",
-    "pages/createCollection/index",
-    "pages/uploadFile/index",
-    "pages/selectRecord/index",
-    "pages/updateRecord/index",
-    "pages/updateRecordResult/index",
-    "pages/updateRecordSuccess/index",
-    "pages/sumRecord/index",
-    "pages/sumRecordResult/index",
-    "pages/testComInCom/index"
+    "pages/souvenir/index",
+    "pages/mine/index",
+    "pages/community/index"
   ],
   "subPackages": [
     {
-      "root": "packages/testComInCom2",
-      "pages": ["index"]
+      "root": "packages/community",
+      "pages": [
+        "index"
+      ]
     }
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#fff",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "开始",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "七号家庭",
     "navigationBarTextStyle": "black"
   },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "useExtendedLib": {
+    "weui": true
+  },
   "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
     "list": [
       {
-        "text": "倒计时",
-        "pagePath": "pages/index/index"
+        "pagePath": "pages/index/index",
+        "text": "恋爱日常"
       },
       {
-        "text": "回忆",
-        "pagePath": "pages/memory/memory"
+        "pagePath": "pages/souvenir/index",
+        "text": "纪念"
+      },
+      {
+        "pagePath": "pages/community/index",
+        "text": "社区"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "mine"
       }
     ]
   },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "usingComponents": {}
 }
