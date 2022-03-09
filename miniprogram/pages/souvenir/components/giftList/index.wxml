@@ -1,0 +1,61 @@
+<view class="gift-list">
+  <view class="gift-list-header">
+    <view class="gift-list-header-item {{currentTab==='me'?'active':''}}" data-tab="me" bindtap="changeTab">
+      I Like
+    </view>
+    <view class="gift-list-header-item {{currentTab==='she'?'active':''}}" data-tab="she" bindtap="changeTab">
+      {{hisDesc}} Like
+    </view>
+  </view>
+  <swiper class="gift-list-swiper" current="{{swiperCurrentIndexObj[currentTab]}}">
+    <swiper-item>
+      <scroll-view
+        class="gift-list-box"
+        scroll-y
+        scroll-top="{{scrollTop}}"
+        refresher-enabled
+        refresher-triggered="{{refresherTriggered}}"
+        bindrefresherrefresh="bindrefresherrefresh"
+      >
+        <view class="gift-list-box-header">共{{myGifts.total}}件</view>
+          <block wx:for="{{myGifts.list}}">
+            <view class="gift-list-item {{index===0?'gift-list-item-first ':''}}">
+              <switch type="checkbox" class="item-checkbox" disabled="{{item.is_complete}}" checked="{{item.is_complete}}" data-item="{{item}}" bindchange="handleComplete"></switch>
+              <view class="item-name" data-item="{{item}}" bindtap="handleQuery">{{item.name}}</view>
+              <view class="item-operate">
+                <image class="item-icon-edit" mode="heightFix" data-item="{{item}}" bindtap="handleEdit" src="../../../../images/edit_light.png" />
+                <image class="item-icon-delete" mode="heightFix" data-item="{{item}}" bindtap="handleDelete" src="../../../../images/delete.png" />
+              </view>
+            </view>
+          </block>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view
+        class="gift-list-box"
+        scroll-y
+        scroll-top="{{scrollTop}}"
+        refresher-enabled
+        refresher-triggered="{{refresherTriggered}}"
+        bindrefresherrefresh="bindrefresherrefresh"
+      >
+        <view class="gift-list-box-header">共{{herGifts.total}}件</view>
+          <block wx:for="{{herGifts.list}}">
+            <view class="gift-list-item {{index===0?'gift-list-item-first ':''}}">
+              <!-- <checkbox class="item-checkbox" value="{{item.isComplete}}" bindtap="handleComplete"></checkbox> -->
+              <view class="item-name" data-item="{{item}}" bindtap="handleQuery">{{item.name}}</view>
+              <!-- <view class="item-operate">
+                <image class="item-icon-delete" mode="heightFix" src="../../../../images/delete.png" />
+                <image class="item-icon-edit" mode="heightFix" src="../../../../images/edit_light.png" />
+              </view> -->
+              <view class="time">{{item.wanna_date}}</view>
+            </view>
+          </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+  <!-- 查看 -->
+  <giftForm wx:if="{{isShowQueryDialog}}" type="query" item="{{currentQueryItem}}" bindclose="handleCloseDialog"></giftForm>
+  <!-- 编辑 -->
+  <giftForm wx:if="{{isShowEditDialog}}" title="编辑礼物" type="edit" item="{{currentEditItem}}" bindsubmitSuccess="handleEditSuccess" bindclose="handleCloseDialog"></giftForm>
+</view>

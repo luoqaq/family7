@@ -1,0 +1,6 @@
+<!--components/tabbar/index.wxml-->
+<view class="tabs">
+  <block wx:for="{{tabs}}">
+    <view class="tab {{currentTab===item.id?'active':''}}" data-item="{{item}}" catchtap="handleChageTab">{{item.name}}</view>
+  </block>
+</view>

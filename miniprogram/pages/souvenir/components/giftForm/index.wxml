@@ -1,0 +1,34 @@
+<!--pages/souvenir/components/giftForm/index.wxml-->
+<view class="gift-dialog">
+  <view class="gift-form">
+  <view class="gift-form-header">
+    {{title}}
+    <image class="gift-form-close" src="../../../../images/close.png" bindtap="close"></image>
+  </view>
+  <form bindsubmit="submit">
+    <view class="gift-form-row">
+      <text class="gift-from-row-text">礼物</text>
+      <text wx:if="{{type==='query'}}">{{name}}</text>
+      <input wx:else name="name" value="{{name}}" placeholder="请输入礼物名称" bindinput="handleInputName"/>
+    </view>
+    <view class="gift-form-row">
+      <text class="gift-from-row-text">希望得到的日期</text>
+      <text wx:if="{{type==='query'}}">{{date}}</text>
+      <picker wx:else name="date" mode="date" start="{{startDate}}" value="{{date}}" bindchange="handleChangeDate">
+        <view class="picker">
+          选择 {{date}}
+        </view>
+      </picker>
+    </view>
+    <view class="gift-form-row" style="margin-bottom:{{type==='query'?'60rpx':''}};">
+      <text wx:if="{{type!=='add'}}" class="gift-from-row-text">来自赠送？</text>
+      <text wx:else class="gift-from-row-text">赠送礼物？</text>
+      <switch disabled="{{type!=='add'}}" type="checkbox" checked="{{isPresent}}" name="isPresent" bindchange="handleChangePresent" />
+    </view>
+    <view wx:if="{{type!=='query'}}" class="gift-form-row">
+      <button class="gift-form-btn" form-type="reset">重置</button>
+      <button class="gift-form-btn" form-type="submit">提交</button>
+    </view>
+  </form>
+  </view>
+</view>

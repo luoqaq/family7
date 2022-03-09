@@ -1,0 +1,46 @@
+/* pages/souvenir/components/giftForm/index.wxss */
+.gift-dialog {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, .6);
+}
+.gift-form {
+  margin: 200rpx auto;
+  width: 80%;
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+.gift-form-header {
+  position: relative;
+  font-size: 36rpx;
+  font-weight: bold;
+  text-align: center;
+}
+.gift-form-close {
+  position: absolute;
+  right: 0;
+  top: 8rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.gift-form-row {
+  display: flex;
+  margin-top: 30rpx;
+  align-items: center;
+}
+.gift-form-row:first-child {
+  margin-top: 60rpx;
+}
+.gift-from-row-text {
+  color: #666;
+  width: 250rpx;
+  white-space: nowrap;
+}
+.gift-form-btn {
+  width: 50%;
+  margin-top: 30rpx;
+}

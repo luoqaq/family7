@@ -1,0 +1,16 @@
+/* packages/souvenir/gift/index.wxss */
+.gift-item:first-child {
+  margin-top: 200rpx;
+}
+.gift-item {
+  margin-top: 150rpx;
+  width: 400rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 20rpx;
+  font-size: 34rpx;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

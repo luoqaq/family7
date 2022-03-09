@@ -1,0 +1,5 @@
+<!--packages/souvenir/components/newGift/index.wxml-->
+<view class="new-gift">
+  <image bindtap="tapNew" class="new-gift-img" src="../../../../images/new.png"></image>
+  <giftForm wx:if="{{isShowDialog}}" type="add" title="新的礼物" bindsubmitSuccess="submitSuccess" bindclose="close"></giftForm>
+</view>

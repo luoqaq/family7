@@ -1,0 +1,21 @@
+/* components/tabbar/index.wxss */
+.tabs {
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 160rpx;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  box-shadow: 0 0 6rpx rgba(0, 0, 0, .2);
+}
+.tab {
+  white-space: nowrap;
+  font-size: 34rpx;
+  text-align: center;
+  padding-top: 24rpx;
+}
+.tab.active {
+  color: red;
+}

@@ -1,0 +1,25 @@
+<!--pages/mine/index.wxml-->
+<view class="mine">
+  <block wx:if="{{isShowLogin}}">
+    <login bindsuccess="handleLoginSuccess" bindclose="handleCloseLogin"></login>
+  </block>
+  <view wx:if="{{userInfo}}" class="user">
+    <view class="user-row">
+      <image class="user-avatar" src="{{imgs[userInfo.sex]}}"></image>
+      <view class="user-row-name">{{userInfo.name}}</view>
+    </view>
+    <view class="user-row">
+      <view class="user-row-text">性别</view>
+      <view class="user-row-value">{{sexDesc[userInfo.sex]}}</view>
+    </view>
+    <view wx:if="{{userInfo.cpInfo}}" class="user-row">
+      <view class="user-row-text user-row-text-long">我的另一半</view>
+      <view class="user-row-value">{{userInfo.cpInfo.name}}</view>
+    </view>
+    <view wx:else class="user-row">
+      <view class="user-row-text">CP码</view>
+      <view class="user-row-value user-row-value-copy" bindtap="copy">点击复制给对方以绑定CP</view>
+    </view>
+  </view>
+  <view wx:else class="registry-btn" bindtap="handleRegistry">请注册个人信息</view>
+</view>

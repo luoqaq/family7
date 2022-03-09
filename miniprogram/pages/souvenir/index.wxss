@@ -1,0 +1,5 @@
+/* packages/souvenir/index.wxss */
+.souvenir {
+  width: 100%;
+  overflow-x: hidden;
+}

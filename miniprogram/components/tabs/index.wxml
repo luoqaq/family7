@@ -1,0 +1,11 @@
+<!--components/tabs/index.wxml-->
+<view class="tabs">
+  <block wx:for="{{tabs}}">
+    <view
+      class="tab {{currentTabId===item.id?'active active-font-color':''}}"
+      catchtap="changeTab"
+      data-item="{{item}}"
+      data-index="{{index}}"
+    >{{item.name}}</view>
+  </block>
+</view>

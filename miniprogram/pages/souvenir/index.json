@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "login": "../../components/login",
+    "tabs": "../../components/tabs",
+    "gift": "./components/gift",
+    "newGift": "./components/newGift",
+    "giftList": "./components/giftList"
+  }
+}

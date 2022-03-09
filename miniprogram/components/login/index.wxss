@@ -1,0 +1,42 @@
+/* components/login/index.wxss */
+.login-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, .6);
+  z-index: 999;
+}
+.login-form-title {
+  font-size: 34rpx;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50rpx;
+}
+.login-form {
+  width: 80%;
+  margin: 300rpx auto;
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+.login-form-close {
+  float: right;
+  width: 40rpx;
+  height: 40rpx;
+  transform: translateY(8rpx);
+}
+.login-form-row {
+  display: flex;
+  margin: 50rpx 0;
+}
+.login-form-row:last-child {
+  margin-bottom: 0;
+}
+.login-form-row-text {
+  width: 150rpx;
+}
+.login-form-row-radio {
+  margin-right: 50rpx;
+}

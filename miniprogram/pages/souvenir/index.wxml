@@ -1,0 +1,10 @@
+<!--packages/souvenir/index.wxml-->
+<view class="souvenir">
+  <block wx:if="{{isShowLogin}}">
+    <login bindsuccess="handleLoginSuccess" bindclose="handleCloseLogin"></login>
+  </block>
+  <tabs tabs="{{tabs}}" currentTabId="{{currentTabId}}" bindchangeTab="handleChangeTab"></tabs>
+  <!-- <gift wx:if="{{currentTabId==='gift'}}" hisDesc="{{hisDesc}}"></gift> -->
+  <giftList triggerAddGift="{{triggerAddGift}}" defaultTab="me" hisDesc="{{hisDesc}}"></giftList>
+  <newGift bindadd="handleAddGift"></newGift>
+</view>

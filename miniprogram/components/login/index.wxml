@@ -1,0 +1,25 @@
+<view class="login-box">
+  <view class="login-form">
+    <view class="login-form-title">
+      注册个人信息
+      <image class="login-form-close" src="../../images/close.png" bindtap="close"></image>
+    </view>
+    <form bindsubmit="submit">
+      <view class="login-form-row">
+        <text class="login-form-row-text">名字</text>
+        <input name="name" placeholder="请输入名字" />
+      </view>
+      <view class="login-form-row">
+        <text class="login-form-row-text">性别</text>
+        <radio-group name="sex" value="male">
+          <label class="login-form-row-radio"><radio value="male"></radio>男</label>
+          <label class="login-form-row-radio"><radio value="female"></radio>女</label>
+        </radio-group>
+      </view>
+      <view class="login-form-row">
+        <button class="login-form-row-btn" form-type="reset">重置</button>
+        <button class="login-form-row-btn" form-type="submit">提交</button>
+      </view>
+    </form>
+  </view>
+</view>

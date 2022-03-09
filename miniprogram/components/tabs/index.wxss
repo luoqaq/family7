@@ -1,0 +1,34 @@
+/* components/tabs/index.wxss */
+.tabs {
+  padding: 0 20rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, .2);
+}
+.tab {
+  flex-shrink: 0;
+  min-width: 120rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+}
+.tab.active {
+  position: relative;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.tab.active::after {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  content: "";
+  width: 30rpx;
+  height: 6rpx;
+  border-radius: 3rpx;
+  background-color: red;
+  transform: translateX(-50%);
+  
+}

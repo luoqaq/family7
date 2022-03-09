@@ -1,0 +1,11 @@
+/* packages/souvenir/components/newGift/index.wxss */
+.new-gift {
+  position: fixed;
+  right: 30rpx;
+  bottom: 300rpx;
+  z-index: 999;
+}
+.new-gift-img {
+  width: 80rpx;
+  height: 80rpx;
+}

@@ -1,0 +1,36 @@
+/* pages/mine/index.wxss */
+.user {
+  padding: 20rpx;
+}
+.user-row {
+  display: flex;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.user-avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  margin-right: 20rpx;
+}
+.user-row-name {
+  font-size: 30rpx;
+}
+.user-row-text {
+  width: 120rpx;
+}
+.registry-btn {
+  width: 80%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  margin: 300rpx auto;
+  background-color: #e3abc2;
+  color: #fff;
+  border-radius: 20rpx;
+  text-align: center;
+}
+
+.user-row-text-long {
+  width: 200rpx;
+}

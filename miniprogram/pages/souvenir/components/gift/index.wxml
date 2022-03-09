@@ -1,0 +1,5 @@
+<!--packages/souvenir/gift/index.wxml-->
+<view class="gift">
+  <view class="gift-item" data-type="me" bindtap="handleTap">I Like</view>
+  <view class="gift-item" data-type="he" bindtap="handleTap">{{hisDesc}} Like</view>
+</view>
